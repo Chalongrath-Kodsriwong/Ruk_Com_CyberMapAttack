@@ -79,6 +79,22 @@ function AppWrapper() {
     );
   }
 
+  useEffect(() => {
+    const handleReload = () => {
+      window.location.reload();
+    };
+  
+    // ตั้งค่า listener สำหรับตรวจจับการเปลี่ยนเส้นทาง
+    window.addEventListener('popstate', handleReload);
+    window.addEventListener('pushstate', handleReload);
+  
+    return () => {
+      window.removeEventListener('popstate', handleReload);
+      window.removeEventListener('pushstate', handleReload);
+    };
+  }, []);
+  
+
   return (
     <div className={`App ${location.pathname === "/" ? "main-lock" : ""}`}>
       <Navbar />

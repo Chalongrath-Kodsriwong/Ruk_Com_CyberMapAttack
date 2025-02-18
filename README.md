@@ -16,6 +16,8 @@ Currently, two official plugins are available:
 
 - pip install -r requirement.txt = Use for pip library requirement in this text
 
+- chmod +x (ตามด้วยชื่อไฟล์ ShellScript ที่สร้างขึ้นมา)
+
 
 Create env on Windows:
 - Install python from Microsoft Store
