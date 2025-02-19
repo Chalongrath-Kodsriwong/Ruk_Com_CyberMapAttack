@@ -122,7 +122,7 @@ function Navbar() {
       {/* Logo Section */}
       <div className="navbar-logo">
         <a href="https://ruk-com.cloud/">
-        <img src="/rukcom-logo.png" alt="Ruk-Com Logo" />
+        <img src="/rukcom-logo.png" alt="Logo" />
         </a>
       </div>
 
