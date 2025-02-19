@@ -7,7 +7,13 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "vite",
+    "dev:bg": "nohup vite > vite.log 2>&1 &",
+    "start:bg": "nohup vite > vite.log 2>&1 &",
+    "preview:bg": "nohup vite preview > vite.log 2>&1 &",
+    "stop": "pkill -f vite",
+    "restart": "npm run stop && npm run start:bg"
   },
   "dependencies": {
     "@turf/turf": "^7.1.0",
