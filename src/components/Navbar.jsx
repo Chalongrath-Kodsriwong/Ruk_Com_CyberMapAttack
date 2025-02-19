@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./css/Navbar.css";
-import logo from "/public/image.png";
+import logo from "/rukcom-logo.png";
 import Count_Attack from "./Count_Attack";
 import axios from "axios";
 
@@ -122,7 +122,7 @@ function Navbar() {
       {/* Logo Section */}
       <div className="navbar-logo">
         <a href="https://ruk-com.cloud/">
-          <img src={logo} alt="Ruk-Com Logo" />
+        <img src="/rukcom-logo.png" alt="Ruk-Com Logo" />
         </a>
       </div>
 
