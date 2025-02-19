@@ -8,12 +8,10 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "vite",
-    "dev:bg": "nohup vite > vite.log 2>&1 &",
-    "start:bg": "nohup vite > vite.log 2>&1 &",
-    "preview:bg": "nohup vite preview > vite.log 2>&1 &",
-    "stop": "pkill -f vite",
-    "restart": "npm run stop && npm run start:bg"
+    "start:pm2": "pm2 start 'vite' --name vite-app",
+    "stop:pm2": "pm2 stop vite-app",
+    "restart:pm2": "pm2 restart vite-app",
+    "logs:pm2": "pm2 logs vite-app"
   },
   "dependencies": {
     "@turf/turf": "^7.1.0",
@@ -53,7 +51,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
-    "vite": "^6.1.0"
+    "vite": "^0.10.3"
   },
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
   "main": "eslint.config.js",
