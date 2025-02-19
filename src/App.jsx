@@ -10,7 +10,7 @@ import Classification from './components/Classification';
 import Country_Attack from './components/Country_Attack';
 import Data_Attack from './components/Data_Attack';
 import ProtectedRoute from './components/ProtectedRoute';
-import CreateUser from "./components/CreateUser.jsx";
+// import CreateUser from "./components/CreateUser.jsx";
 import Management from "./components/Management"; 
 import AcceptInvite from './components/AcceptInvite'; 
 import ResetPassword from './components/ResetPassword'; 
