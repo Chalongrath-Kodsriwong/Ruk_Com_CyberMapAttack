@@ -10,6 +10,7 @@ import Classification from './components/Classification';
 import Country_Attack from './components/Country_Attack';
 import Data_Attack from './components/Data_Attack';
 import ProtectedRoute from './components/ProtectedRoute';
+import CreateUser from "./components/CreateUser.jsx";
 import Management from "./components/Management"; 
 import AcceptInvite from './components/AcceptInvite'; 
 import ResetPassword from './components/ResetPassword'; 
@@ -53,6 +54,7 @@ function AppWrapper() {
         if (error.response && error.response.status === 401) {
           if (
             location.pathname !== "/" &&
+            location.pathname !== "/createuser" &&
             location.pathname !== "/reset-password"
           ) {
             localStorage.removeItem("jwt_token");
@@ -77,22 +79,6 @@ function AppWrapper() {
     );
   }
 
-  useEffect(() => {
-    const handleReload = () => {
-      window.location.reload();
-    };
-  
-    // ตั้งค่า listener สำหรับตรวจจับการเปลี่ยนเส้นทาง
-    window.addEventListener('popstate', handleReload);
-    window.addEventListener('pushstate', handleReload);
-  
-    return () => {
-      window.removeEventListener('popstate', handleReload);
-      window.removeEventListener('pushstate', handleReload);
-    };
-  }, []);
-  
-
   return (
     <div className={`App ${location.pathname === "/" ? "main-lock" : ""}`}>
       <Navbar />
@@ -100,6 +86,10 @@ function AppWrapper() {
         <Route
           path="/"
           element={<div className="Login"><Login /></div>}
+        />
+        <Route
+          path="/createuser"
+          element={<div className="createuser"><CreateUser /></div>}
         />
         <Route
           path="/main_page"
