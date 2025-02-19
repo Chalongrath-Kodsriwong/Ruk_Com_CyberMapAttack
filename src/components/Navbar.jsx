@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./css/Navbar.css";
-import logo from "../../public/image.png";
+import logo from "/public/image.png";
 import Count_Attack from "./Count_Attack";
 import axios from "axios";
 

@@ -88,7 +88,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(../public/Background3.jpg);
+  background: url(/public/Background3.jpg);
   background-size: cover; /* ปรับให้ภาพพื้นหลังครอบคลุมทั้งพื้นที่ */
   background-position: center; /* จัดตำแหน่งภาพไว้ตรงกลาง */
   background-repeat: no-repeat; /* ป้องกันการทำซ้ำของภาพ */
